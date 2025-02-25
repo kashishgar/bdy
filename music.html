@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Music</title>
+</head>
+<body>
+    <audio id="birthday-music" autoplay loop>
+        <source src="WhatsApp Audio 2025-02-25 at 9.35.58 PM.mpeg" type="audio/mpeg">
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let audio = document.getElementById("birthday-music");
+            let playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Autoplay blocked. Adding play button.");
+                    let btn = document.createElement("button");
+                    btn.innerText = "Play Music";
+                    btn.onclick = () => audio.play();
+                    document.body.appendChild(btn);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
