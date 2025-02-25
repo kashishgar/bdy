@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+  
+        
+</head>
+<body>
+
+   
+    <script>
+        window.onload = function () {
+    if (!localStorage.getItem("musicWindowOpened")) {
+        let musicWindow = window.open("music.html", "musicWindow", "width=200,height=100");
+        if (musicWindow) {
+            localStorage.setItem("musicWindowOpened", "true");
+        }
+    }
+};
+    </script>
+
+    <div id="start-screen">
+        <h2>🎉 Tap to Start the Celebration! 🎶</h2>
+        <button id="start-button" class="btn">Start</button>
+    </div>
+
+    <audio id="birthday-music" loop>
+        <source src="WhatsApp Audio 2024-04-07 at 6.38.52 PM.mpeg" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <h2>❤️ Happy Birthday My Love! ❤️</h2><br>
+        <p>You make every moment special, and I’m so grateful to have you in my life💕. <br>Wishing you a day filled with love, joy, and everything that makes you happy!🥂🧿</p> <br>
+
+        <p>Welcome to your special birthday website!😍👀 <p>
+
+        <p>Click below to explore.</p>
+
+        <a href="gallery.html" class="btn">See Our Memories</a>
+        <a href="memory.html" class="btn">A Special Message</a>
+        
+       
+    </div>
+
+    
+
+    <div id="balloon-container"></div>
+    
+    
+    
+</body>
+</html>

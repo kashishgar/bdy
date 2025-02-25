@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories</title>
+    <link rel="stylesheet" href="./style.css">
+   
+</head>
+
+<body>
+
+    <script>
+        window.onload = function () {
+    if (!localStorage.getItem("musicWindowOpened")) {
+        let musicWindow = window.open("music.html", "musicWindow", "width=200,height=100");
+        if (musicWindow) {
+            localStorage.setItem("musicWindowOpened", "true");
+        }
+    }
+};
+    </script>
+    <div class="container">
+        <h1>💖 Our Beautiful Memories 💖</h1>
+        <div class="gallery">
+          
+            <img src="./b2.jpeg" alt="Memory 2">
+            <img src="./b1.jpeg" alt="Memory 3">
+            <video controls width="100%">
+                <source src="./v2.mp4" type="video/mp4">
+            </video>
+            <video controls width="100%">
+                <source src="./v1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <a href="index.html" class="btn">Back to Home</a>
+    </div>
+
+    <iframe src="music.html" allow="autoplay" style="display: none;"></iframe>
+
+    <audio id="birthday-music" controls autoplay loop>
+        <source src="WhatsApp Audio 2024-04-07 at 6.38.52 PM.mpeg" type="audio/mpeg">
+    </audio>
+</body>
+</html>
